@@ -1,5 +1,7 @@
-from django.shortcuts import render
+
+from django.template import loader
 from django.http import HttpResponse
+
 
 
 # Create your views here.
@@ -7,6 +9,7 @@ from django.http import HttpResponse
 
 
 def members(request):
-    return HttpResponse("Hello, World!")
+    template = loader.get_template('myfirst.html')
+    return HttpResponse(template.render())
 
 
