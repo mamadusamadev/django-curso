@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+    {% block title %} 
+
+    {% endblock title %}
+   </title>
 </head>
 <body>
 
-    <h1>HELLO, WORLD!</h1>
-    <P>Seja bem-vindo ao meu primeiro proeto django! </P>
+    {% block content %}
+    {% endblock content %}
     
 </body>
 </html>
