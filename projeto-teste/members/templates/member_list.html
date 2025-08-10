@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Pagina de - Listagem de Membros
+{% endblock title %}
+
+
+
+{% block content %}
+
+    <h1>Lista dos Membros</h1>
+    <ul>
+        {% for m in all_members %}
+          <li><a href="detail/{{m.id}}">{{ m.firstname }} {{m.lastname}}</a></li>
+        {% endfor %}
+    </ul>
+
+
+    <p>
+        <a href="/">Voltar para Homepage</a>
+    </p>
+
+{% endblock content %}

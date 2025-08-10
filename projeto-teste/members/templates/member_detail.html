@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+
+{% block title %}
+    Pagina de Detalhes de Membro
+{% endblock title %}
+
+
+
+{% block content %}
+    <p>
+        <a href="/members">Volte para Lista dos membros</a>
+    </p>
+
+    <h1>Nome: {{ member_detail.firstname }} {{member_detail.lastname}}</h1>
+    <p> Telefone: {{ member_detail.phone }}</p>
+    <p>Data de adesão: {{ member_detail.data_joined }}</p>
+
+{% endblock content %}
