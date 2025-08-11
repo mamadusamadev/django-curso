@@ -33,4 +33,5 @@ def main(request):
     return HttpResponse(template.render())
 
 def testing(request):
-    return HttpResponse("Testing view")
+    templates = loader.get_template("template.html")
+    return HttpResponse(templates.render())
